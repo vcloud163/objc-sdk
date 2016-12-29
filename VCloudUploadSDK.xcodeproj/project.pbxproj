@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E2E03491D6D339C0071A186 /* NOSAFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E02F71D6D339C0071A186 /* NOSAFHTTPRequestOperation.m */; };
+		0E2E034A1D6D339C0071A186 /* NOSAFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E02F91D6D339C0071A186 /* NOSAFHTTPRequestOperationManager.m */; };
+		0E2E034B1D6D339C0071A186 /* NOSAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E02FB1D6D339C0071A186 /* NOSAFHTTPSessionManager.m */; };
+		0E2E034C1D6D339C0071A186 /* NOSAFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E02FE1D6D339C0071A186 /* NOSAFNetworkReachabilityManager.m */; };
+		0E2E034D1D6D339C0071A186 /* NOSAFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03001D6D339C0071A186 /* NOSAFSecurityPolicy.m */; };
+		0E2E034E1D6D339C0071A186 /* NOSAFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03021D6D339C0071A186 /* NOSAFURLConnectionOperation.m */; };
+		0E2E034F1D6D339C0071A186 /* NOSAFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03041D6D339C0071A186 /* NOSAFURLRequestSerialization.m */; };
+		0E2E03501D6D339C0071A186 /* NOSAFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03061D6D339C0071A186 /* NOSAFURLResponseSerialization.m */; };
+		0E2E03511D6D339C0071A186 /* NOSAFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03081D6D339C0071A186 /* NOSAFURLSessionManager.m */; };
+		0E2E03521D6D339C0071A186 /* GZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E030C1D6D339C0071A186 /* GZIP.m */; };
+		0E2E03531D6D339C0071A186 /* NOSAsyncRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E030E1D6D339C0071A186 /* NOSAsyncRun.m */; };
+		0E2E03541D6D339C0071A186 /* NOSBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03101D6D339C0071A186 /* NOSBase64.m */; };
+		0E2E03551D6D339C0071A186 /* NOSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03121D6D339C0071A186 /* NOSConfig.m */; };
+		0E2E03561D6D339C0071A186 /* NOSHmacSha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03141D6D339C0071A186 /* NOSHmacSha1.m */; };
+		0E2E03571D6D339C0071A186 /* NOSIPToLong.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03161D6D339C0071A186 /* NOSIPToLong.m */; };
+		0E2E03581D6D339C0071A186 /* NOSIPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03181D6D339C0071A186 /* NOSIPUtils.m */; };
+		0E2E03591D6D339C0071A186 /* NOSMd5.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E031A1D6D339C0071A186 /* NOSMd5.m */; };
+		0E2E035A1D6D339C0071A186 /* NOSTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E031C1D6D339C0071A186 /* NOSTimeUtils.m */; };
+		0E2E035B1D6D339C0071A186 /* NOSUrlCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E031E1D6D339C0071A186 /* NOSUrlCode.m */; };
+		0E2E035C1D6D339C0071A186 /* NOSHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03221D6D339C0071A186 /* NOSHttpManager.m */; };
+		0E2E035D1D6D339C0071A186 /* NOSResponseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03241D6D339C0071A186 /* NOSResponseInfo.m */; };
+		0E2E035E1D6D339C0071A186 /* NOSUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03261D6D339C0071A186 /* NOSUserAgent.m */; };
+		0E2E035F1D6D339C0071A186 /* NOSLbsNetMonitorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03291D6D339C0071A186 /* NOSLbsNetMonitorTask.m */; };
+		0E2E03601D6D339C0071A186 /* NOSLbsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E032B1D6D339C0071A186 /* NOSLbsTask.m */; };
+		0E2E03631D6D339C0071A186 /* NOSFileRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03341D6D339C0071A186 /* NOSFileRecorder.m */; };
+		0E2E03641D6D339C0071A186 /* NOSLbsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03381D6D339C0071A186 /* NOSLbsInfo.m */; };
+		0E2E03651D6D339C0071A186 /* NOSStatisticsItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E033A1D6D339C0071A186 /* NOSStatisticsItems.m */; };
+		0E2E03661D6D339C0071A186 /* NOSStatTimeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E033C1D6D339C0071A186 /* NOSStatTimeTask.m */; };
+		0E2E03671D6D339C0071A186 /* NOSResumeUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E033F1D6D339C0071A186 /* NOSResumeUpload.m */; };
+		0E2E03681D6D339C0071A186 /* NOSUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03421D6D339C0071A186 /* NOSUploadManager.m */; };
+		0E2E03691D6D339C0071A186 /* NOSUploadOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03451D6D339C0071A186 /* NOSUploadOption.m */; };
+		0E2E036A1D6D339C0071A186 /* NOSVcloudHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03481D6D339C0071A186 /* NOSVcloudHttpManager.m */; };
+		0E2E03AE1D6D37D80071A186 /* NOSConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E2E03111D6D339C0071A186 /* NOSConfig.h */; };
+		0E2E03B31D6D381A0071A186 /* NOSFileRecorder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E2E03331D6D339C0071A186 /* NOSFileRecorder.h */; };
+		0E2E03B41D6D381A0071A186 /* NOSUploadManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E2E03411D6D339C0071A186 /* NOSUploadManager.h */; };
+		0E2E03B51D6D381A0071A186 /* NOSUploadOption.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E2E03441D6D339C0071A186 /* NOSUploadOption.h */; };
+		0E2E03CC1D6D438C0071A186 /* NOSRecorderDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E2E03351D6D339C0071A186 /* NOSRecorderDelegate.h */; };
+		0E2E03EB1D6D4BA40071A186 /* NOSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03EA1D6D4BA40071A186 /* NOSReachability.m */; };
+		0E2E04081D6D8E0B0071A186 /* NOSBucketLBSMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E04071D6D8E0B0071A186 /* NOSBucketLBSMap.m */; };
+		0E2E040D1D6DA32D0071A186 /* NOSVCloudUploadSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E2E040C1D6DA2E30071A186 /* NOSVCloudUploadSDK.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E2E02E61D6D322E0071A186 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0E2E040D1D6DA32D0071A186 /* NOSVCloudUploadSDK.h in CopyFiles */,
+				0E2E03CC1D6D438C0071A186 /* NOSRecorderDelegate.h in CopyFiles */,
+				0E2E03B31D6D381A0071A186 /* NOSFileRecorder.h in CopyFiles */,
+				0E2E03B41D6D381A0071A186 /* NOSUploadManager.h in CopyFiles */,
+				0E2E03B51D6D381A0071A186 /* NOSUploadOption.h in CopyFiles */,
+				0E2E03AE1D6D37D80071A186 /* NOSConfig.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0E2E02E81D6D322E0071A186 /* libVCloudUploadSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVCloudUploadSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2E02F61D6D339C0071A186 /* NOSAFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		0E2E02F71D6D339C0071A186 /* NOSAFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		0E2E02F81D6D339C0071A186 /* NOSAFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		0E2E02F91D6D339C0071A186 /* NOSAFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		0E2E02FA1D6D339C0071A186 /* NOSAFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFHTTPSessionManager.h; sourceTree = "<group>"; };
+		0E2E02FB1D6D339C0071A186 /* NOSAFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFHTTPSessionManager.m; sourceTree = "<group>"; };
+		0E2E02FC1D6D339C0071A186 /* NOSAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFNetworking.h; sourceTree = "<group>"; };
+		0E2E02FD1D6D339C0071A186 /* NOSAFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		0E2E02FE1D6D339C0071A186 /* NOSAFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		0E2E02FF1D6D339C0071A186 /* NOSAFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFSecurityPolicy.h; sourceTree = "<group>"; };
+		0E2E03001D6D339C0071A186 /* NOSAFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFSecurityPolicy.m; sourceTree = "<group>"; };
+		0E2E03011D6D339C0071A186 /* NOSAFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFURLConnectionOperation.h; sourceTree = "<group>"; };
+		0E2E03021D6D339C0071A186 /* NOSAFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFURLConnectionOperation.m; sourceTree = "<group>"; };
+		0E2E03031D6D339C0071A186 /* NOSAFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFURLRequestSerialization.h; sourceTree = "<group>"; };
+		0E2E03041D6D339C0071A186 /* NOSAFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFURLRequestSerialization.m; sourceTree = "<group>"; };
+		0E2E03051D6D339C0071A186 /* NOSAFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFURLResponseSerialization.h; sourceTree = "<group>"; };
+		0E2E03061D6D339C0071A186 /* NOSAFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFURLResponseSerialization.m; sourceTree = "<group>"; };
+		0E2E03071D6D339C0071A186 /* NOSAFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAFURLSessionManager.h; sourceTree = "<group>"; };
+		0E2E03081D6D339C0071A186 /* NOSAFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAFURLSessionManager.m; sourceTree = "<group>"; };
+		0E2E030B1D6D339C0071A186 /* GZIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZIP.h; sourceTree = "<group>"; };
+		0E2E030C1D6D339C0071A186 /* GZIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZIP.m; sourceTree = "<group>"; };
+		0E2E030D1D6D339C0071A186 /* NOSAsyncRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSAsyncRun.h; sourceTree = "<group>"; };
+		0E2E030E1D6D339C0071A186 /* NOSAsyncRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSAsyncRun.m; sourceTree = "<group>"; };
+		0E2E030F1D6D339C0071A186 /* NOSBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSBase64.h; sourceTree = "<group>"; };
+		0E2E03101D6D339C0071A186 /* NOSBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSBase64.m; sourceTree = "<group>"; };
+		0E2E03111D6D339C0071A186 /* NOSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSConfig.h; sourceTree = "<group>"; };
+		0E2E03121D6D339C0071A186 /* NOSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSConfig.m; sourceTree = "<group>"; };
+		0E2E03131D6D339C0071A186 /* NOSHmacSha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSHmacSha1.h; sourceTree = "<group>"; };
+		0E2E03141D6D339C0071A186 /* NOSHmacSha1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSHmacSha1.m; sourceTree = "<group>"; };
+		0E2E03151D6D339C0071A186 /* NOSIPToLong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSIPToLong.h; sourceTree = "<group>"; };
+		0E2E03161D6D339C0071A186 /* NOSIPToLong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSIPToLong.m; sourceTree = "<group>"; };
+		0E2E03171D6D339C0071A186 /* NOSIPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSIPUtils.h; sourceTree = "<group>"; };
+		0E2E03181D6D339C0071A186 /* NOSIPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSIPUtils.m; sourceTree = "<group>"; };
+		0E2E03191D6D339C0071A186 /* NOSMd5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSMd5.h; sourceTree = "<group>"; };
+		0E2E031A1D6D339C0071A186 /* NOSMd5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSMd5.m; sourceTree = "<group>"; };
+		0E2E031B1D6D339C0071A186 /* NOSTimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSTimeUtils.h; sourceTree = "<group>"; };
+		0E2E031C1D6D339C0071A186 /* NOSTimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSTimeUtils.m; sourceTree = "<group>"; };
+		0E2E031D1D6D339C0071A186 /* NOSUrlCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSUrlCode.h; sourceTree = "<group>"; };
+		0E2E031E1D6D339C0071A186 /* NOSUrlCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSUrlCode.m; sourceTree = "<group>"; };
+		0E2E03211D6D339C0071A186 /* NOSHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSHttpManager.h; sourceTree = "<group>"; };
+		0E2E03221D6D339C0071A186 /* NOSHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSHttpManager.m; sourceTree = "<group>"; };
+		0E2E03231D6D339C0071A186 /* NOSResponseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSResponseInfo.h; sourceTree = "<group>"; };
+		0E2E03241D6D339C0071A186 /* NOSResponseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSResponseInfo.m; sourceTree = "<group>"; };
+		0E2E03251D6D339C0071A186 /* NOSUserAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSUserAgent.h; sourceTree = "<group>"; };
+		0E2E03261D6D339C0071A186 /* NOSUserAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSUserAgent.m; sourceTree = "<group>"; };
+		0E2E03281D6D339C0071A186 /* NOSLbsNetMonitorTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSLbsNetMonitorTask.h; sourceTree = "<group>"; };
+		0E2E03291D6D339C0071A186 /* NOSLbsNetMonitorTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSLbsNetMonitorTask.m; sourceTree = "<group>"; };
+		0E2E032A1D6D339C0071A186 /* NOSLbsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSLbsTask.h; sourceTree = "<group>"; };
+		0E2E032B1D6D339C0071A186 /* NOSLbsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSLbsTask.m; sourceTree = "<group>"; };
+		0E2E03331D6D339C0071A186 /* NOSFileRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSFileRecorder.h; sourceTree = "<group>"; };
+		0E2E03341D6D339C0071A186 /* NOSFileRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSFileRecorder.m; sourceTree = "<group>"; };
+		0E2E03351D6D339C0071A186 /* NOSRecorderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSRecorderDelegate.h; sourceTree = "<group>"; };
+		0E2E03371D6D339C0071A186 /* NOSLbsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSLbsInfo.h; sourceTree = "<group>"; };
+		0E2E03381D6D339C0071A186 /* NOSLbsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSLbsInfo.m; sourceTree = "<group>"; };
+		0E2E03391D6D339C0071A186 /* NOSStatisticsItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSStatisticsItems.h; sourceTree = "<group>"; };
+		0E2E033A1D6D339C0071A186 /* NOSStatisticsItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSStatisticsItems.m; sourceTree = "<group>"; };
+		0E2E033B1D6D339C0071A186 /* NOSStatTimeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSStatTimeTask.h; sourceTree = "<group>"; };
+		0E2E033C1D6D339C0071A186 /* NOSStatTimeTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSStatTimeTask.m; sourceTree = "<group>"; };
+		0E2E033E1D6D339C0071A186 /* NOSResumeUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSResumeUpload.h; sourceTree = "<group>"; };
+		0E2E033F1D6D339C0071A186 /* NOSResumeUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSResumeUpload.m; sourceTree = "<group>"; };
+		0E2E03401D6D339C0071A186 /* NOSUploadManager+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOSUploadManager+Private.h"; sourceTree = "<group>"; };
+		0E2E03411D6D339C0071A186 /* NOSUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSUploadManager.h; sourceTree = "<group>"; };
+		0E2E03421D6D339C0071A186 /* NOSUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSUploadManager.m; sourceTree = "<group>"; };
+		0E2E03431D6D339C0071A186 /* NOSUploadOption+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOSUploadOption+Private.h"; sourceTree = "<group>"; };
+		0E2E03441D6D339C0071A186 /* NOSUploadOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSUploadOption.h; sourceTree = "<group>"; };
+		0E2E03451D6D339C0071A186 /* NOSUploadOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSUploadOption.m; sourceTree = "<group>"; };
+		0E2E03471D6D339C0071A186 /* NOSVcloudHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSVcloudHttpManager.h; sourceTree = "<group>"; };
+		0E2E03481D6D339C0071A186 /* NOSVcloudHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSVcloudHttpManager.m; sourceTree = "<group>"; };
+		0E2E03E91D6D4BA40071A186 /* NOSReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSReachability.h; sourceTree = "<group>"; };
+		0E2E03EA1D6D4BA40071A186 /* NOSReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSReachability.m; sourceTree = "<group>"; };
+		0E2E04021D6D8C830071A186 /* VCloudUploadSDKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCloudUploadSDKVersion.h; sourceTree = "<group>"; };
+		0E2E04031D6D8C830071A186 /* VCloudUploadInternalMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCloudUploadInternalMacro.h; sourceTree = "<group>"; };
+		0E2E04051D6D8E0B0071A186 /* NOSBucketLBSMap+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NOSBucketLBSMap+Private.h"; sourceTree = "<group>"; };
+		0E2E04061D6D8E0B0071A186 /* NOSBucketLBSMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSBucketLBSMap.h; sourceTree = "<group>"; };
+		0E2E04071D6D8E0B0071A186 /* NOSBucketLBSMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSBucketLBSMap.m; sourceTree = "<group>"; };
+		0E2E040C1D6DA2E30071A186 /* NOSVCloudUploadSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSVCloudUploadSDK.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E2E02E51D6D322E0071A186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E2E02DF1D6D322E0071A186 = {
+			isa = PBXGroup;
+			children = (
+				0E2E02EA1D6D322E0071A186 /* VCloudUploadSDK */,
+				0E2E02E91D6D322E0071A186 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E2E02E91D6D322E0071A186 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E02E81D6D322E0071A186 /* libVCloudUploadSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E2E02EA1D6D322E0071A186 /* VCloudUploadSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E02F41D6D339C0071A186 /* ThridPart */,
+				0E2E03091D6D339C0071A186 /* VCloudUpload */,
+			);
+			path = VCloudUploadSDK;
+			sourceTree = "<group>";
+		};
+		0E2E02F41D6D339C0071A186 /* ThridPart */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E03E81D6D4BA40071A186 /* NOSReachability */,
+				0E2E02F51D6D339C0071A186 /* NOSAFNetworking */,
+			);
+			path = ThridPart;
+			sourceTree = "<group>";
+		};
+		0E2E02F51D6D339C0071A186 /* NOSAFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E02F61D6D339C0071A186 /* NOSAFHTTPRequestOperation.h */,
+				0E2E02F71D6D339C0071A186 /* NOSAFHTTPRequestOperation.m */,
+				0E2E02F81D6D339C0071A186 /* NOSAFHTTPRequestOperationManager.h */,
+				0E2E02F91D6D339C0071A186 /* NOSAFHTTPRequestOperationManager.m */,
+				0E2E02FA1D6D339C0071A186 /* NOSAFHTTPSessionManager.h */,
+				0E2E02FB1D6D339C0071A186 /* NOSAFHTTPSessionManager.m */,
+				0E2E02FC1D6D339C0071A186 /* NOSAFNetworking.h */,
+				0E2E02FD1D6D339C0071A186 /* NOSAFNetworkReachabilityManager.h */,
+				0E2E02FE1D6D339C0071A186 /* NOSAFNetworkReachabilityManager.m */,
+				0E2E02FF1D6D339C0071A186 /* NOSAFSecurityPolicy.h */,
+				0E2E03001D6D339C0071A186 /* NOSAFSecurityPolicy.m */,
+				0E2E03011D6D339C0071A186 /* NOSAFURLConnectionOperation.h */,
+				0E2E03021D6D339C0071A186 /* NOSAFURLConnectionOperation.m */,
+				0E2E03031D6D339C0071A186 /* NOSAFURLRequestSerialization.h */,
+				0E2E03041D6D339C0071A186 /* NOSAFURLRequestSerialization.m */,
+				0E2E03051D6D339C0071A186 /* NOSAFURLResponseSerialization.h */,
+				0E2E03061D6D339C0071A186 /* NOSAFURLResponseSerialization.m */,
+				0E2E03071D6D339C0071A186 /* NOSAFURLSessionManager.h */,
+				0E2E03081D6D339C0071A186 /* NOSAFURLSessionManager.m */,
+			);
+			path = NOSAFNetworking;
+			sourceTree = "<group>";
+		};
+		0E2E03091D6D339C0071A186 /* VCloudUpload */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E04041D6D8E0B0071A186 /* Bucket */,
+				0E2E030A1D6D339C0071A186 /* Common */,
+				0E2E03201D6D339C0071A186 /* Http */,
+				0E2E03271D6D339C0071A186 /* Lbs */,
+				0E2E03321D6D339C0071A186 /* Recorder */,
+				0E2E03361D6D339C0071A186 /* Stat */,
+				0E2E033D1D6D339C0071A186 /* Storage */,
+				0E2E03461D6D339C0071A186 /* Vcloud */,
+			);
+			path = VCloudUpload;
+			sourceTree = "<group>";
+		};
+		0E2E030A1D6D339C0071A186 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E030B1D6D339C0071A186 /* GZIP.h */,
+				0E2E030C1D6D339C0071A186 /* GZIP.m */,
+				0E2E030D1D6D339C0071A186 /* NOSAsyncRun.h */,
+				0E2E030E1D6D339C0071A186 /* NOSAsyncRun.m */,
+				0E2E030F1D6D339C0071A186 /* NOSBase64.h */,
+				0E2E03101D6D339C0071A186 /* NOSBase64.m */,
+				0E2E03111D6D339C0071A186 /* NOSConfig.h */,
+				0E2E03121D6D339C0071A186 /* NOSConfig.m */,
+				0E2E03131D6D339C0071A186 /* NOSHmacSha1.h */,
+				0E2E03141D6D339C0071A186 /* NOSHmacSha1.m */,
+				0E2E03151D6D339C0071A186 /* NOSIPToLong.h */,
+				0E2E03161D6D339C0071A186 /* NOSIPToLong.m */,
+				0E2E03171D6D339C0071A186 /* NOSIPUtils.h */,
+				0E2E03181D6D339C0071A186 /* NOSIPUtils.m */,
+				0E2E03191D6D339C0071A186 /* NOSMd5.h */,
+				0E2E031A1D6D339C0071A186 /* NOSMd5.m */,
+				0E2E031B1D6D339C0071A186 /* NOSTimeUtils.h */,
+				0E2E031C1D6D339C0071A186 /* NOSTimeUtils.m */,
+				0E2E031D1D6D339C0071A186 /* NOSUrlCode.h */,
+				0E2E031E1D6D339C0071A186 /* NOSUrlCode.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0E2E03201D6D339C0071A186 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E03211D6D339C0071A186 /* NOSHttpManager.h */,
+				0E2E03221D6D339C0071A186 /* NOSHttpManager.m */,
+				0E2E03231D6D339C0071A186 /* NOSResponseInfo.h */,
+				0E2E03241D6D339C0071A186 /* NOSResponseInfo.m */,
+				0E2E03251D6D339C0071A186 /* NOSUserAgent.h */,
+				0E2E03261D6D339C0071A186 /* NOSUserAgent.m */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		0E2E03271D6D339C0071A186 /* Lbs */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E03281D6D339C0071A186 /* NOSLbsNetMonitorTask.h */,
+				0E2E03291D6D339C0071A186 /* NOSLbsNetMonitorTask.m */,
+				0E2E032A1D6D339C0071A186 /* NOSLbsTask.h */,
+				0E2E032B1D6D339C0071A186 /* NOSLbsTask.m */,
+			);
+			path = Lbs;
+			sourceTree = "<group>";
+		};
+		0E2E03321D6D339C0071A186 /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E03331D6D339C0071A186 /* NOSFileRecorder.h */,
+				0E2E03341D6D339C0071A186 /* NOSFileRecorder.m */,
+				0E2E03351D6D339C0071A186 /* NOSRecorderDelegate.h */,
+			);
+			path = Recorder;
+			sourceTree = "<group>";
+		};
+		0E2E03361D6D339C0071A186 /* Stat */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E03371D6D339C0071A186 /* NOSLbsInfo.h */,
+				0E2E03381D6D339C0071A186 /* NOSLbsInfo.m */,
+				0E2E03391D6D339C0071A186 /* NOSStatisticsItems.h */,
+				0E2E033A1D6D339C0071A186 /* NOSStatisticsItems.m */,
+				0E2E033B1D6D339C0071A186 /* NOSStatTimeTask.h */,
+				0E2E033C1D6D339C0071A186 /* NOSStatTimeTask.m */,
+			);
+			path = Stat;
+			sourceTree = "<group>";
+		};
+		0E2E033D1D6D339C0071A186 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E033E1D6D339C0071A186 /* NOSResumeUpload.h */,
+				0E2E033F1D6D339C0071A186 /* NOSResumeUpload.m */,
+				0E2E03401D6D339C0071A186 /* NOSUploadManager+Private.h */,
+				0E2E03411D6D339C0071A186 /* NOSUploadManager.h */,
+				0E2E03421D6D339C0071A186 /* NOSUploadManager.m */,
+				0E2E03431D6D339C0071A186 /* NOSUploadOption+Private.h */,
+				0E2E03441D6D339C0071A186 /* NOSUploadOption.h */,
+				0E2E03451D6D339C0071A186 /* NOSUploadOption.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		0E2E03461D6D339C0071A186 /* Vcloud */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E04021D6D8C830071A186 /* VCloudUploadSDKVersion.h */,
+				0E2E04031D6D8C830071A186 /* VCloudUploadInternalMacro.h */,
+				0E2E03471D6D339C0071A186 /* NOSVcloudHttpManager.h */,
+				0E2E03481D6D339C0071A186 /* NOSVcloudHttpManager.m */,
+				0E2E040C1D6DA2E30071A186 /* NOSVCloudUploadSDK.h */,
+			);
+			path = Vcloud;
+			sourceTree = "<group>";
+		};
+		0E2E03E81D6D4BA40071A186 /* NOSReachability */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E03E91D6D4BA40071A186 /* NOSReachability.h */,
+				0E2E03EA1D6D4BA40071A186 /* NOSReachability.m */,
+			);
+			path = NOSReachability;
+			sourceTree = "<group>";
+		};
+		0E2E04041D6D8E0B0071A186 /* Bucket */ = {
+			isa = PBXGroup;
+			children = (
+				0E2E04051D6D8E0B0071A186 /* NOSBucketLBSMap+Private.h */,
+				0E2E04061D6D8E0B0071A186 /* NOSBucketLBSMap.h */,
+				0E2E04071D6D8E0B0071A186 /* NOSBucketLBSMap.m */,
+			);
+			path = Bucket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E2E02E71D6D322E0071A186 /* VCloudUploadSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E2E02F11D6D322E0071A186 /* Build configuration list for PBXNativeTarget "VCloudUploadSDK" */;
+			buildPhases = (
+				0E2E02E41D6D322E0071A186 /* Sources */,
+				0E2E02E51D6D322E0071A186 /* Frameworks */,
+				0E2E02E61D6D322E0071A186 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCloudUploadSDK;
+			productName = VCloudUploadSDK;
+			productReference = 0E2E02E81D6D322E0071A186 /* libVCloudUploadSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E2E02E01D6D322E0071A186 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = taojinliang;
+				TargetAttributes = {
+					0E2E02E71D6D322E0071A186 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 0E2E02E31D6D322E0071A186 /* Build configuration list for PBXProject "VCloudUploadSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0E2E02DF1D6D322E0071A186;
+			productRefGroup = 0E2E02E91D6D322E0071A186 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E2E02E71D6D322E0071A186 /* VCloudUploadSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E2E02E41D6D322E0071A186 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E2E03531D6D339C0071A186 /* NOSAsyncRun.m in Sources */,
+				0E2E03591D6D339C0071A186 /* NOSMd5.m in Sources */,
+				0E2E03581D6D339C0071A186 /* NOSIPUtils.m in Sources */,
+				0E2E03EB1D6D4BA40071A186 /* NOSReachability.m in Sources */,
+				0E2E03641D6D339C0071A186 /* NOSLbsInfo.m in Sources */,
+				0E2E04081D6D8E0B0071A186 /* NOSBucketLBSMap.m in Sources */,
+				0E2E03601D6D339C0071A186 /* NOSLbsTask.m in Sources */,
+				0E2E035D1D6D339C0071A186 /* NOSResponseInfo.m in Sources */,
+				0E2E035A1D6D339C0071A186 /* NOSTimeUtils.m in Sources */,
+				0E2E03511D6D339C0071A186 /* NOSAFURLSessionManager.m in Sources */,
+				0E2E034D1D6D339C0071A186 /* NOSAFSecurityPolicy.m in Sources */,
+				0E2E035E1D6D339C0071A186 /* NOSUserAgent.m in Sources */,
+				0E2E03651D6D339C0071A186 /* NOSStatisticsItems.m in Sources */,
+				0E2E03541D6D339C0071A186 /* NOSBase64.m in Sources */,
+				0E2E03501D6D339C0071A186 /* NOSAFURLResponseSerialization.m in Sources */,
+				0E2E034B1D6D339C0071A186 /* NOSAFHTTPSessionManager.m in Sources */,
+				0E2E03671D6D339C0071A186 /* NOSResumeUpload.m in Sources */,
+				0E2E036A1D6D339C0071A186 /* NOSVcloudHttpManager.m in Sources */,
+				0E2E03491D6D339C0071A186 /* NOSAFHTTPRequestOperation.m in Sources */,
+				0E2E035B1D6D339C0071A186 /* NOSUrlCode.m in Sources */,
+				0E2E03571D6D339C0071A186 /* NOSIPToLong.m in Sources */,
+				0E2E03521D6D339C0071A186 /* GZIP.m in Sources */,
+				0E2E034E1D6D339C0071A186 /* NOSAFURLConnectionOperation.m in Sources */,
+				0E2E035C1D6D339C0071A186 /* NOSHttpManager.m in Sources */,
+				0E2E034F1D6D339C0071A186 /* NOSAFURLRequestSerialization.m in Sources */,
+				0E2E034A1D6D339C0071A186 /* NOSAFHTTPRequestOperationManager.m in Sources */,
+				0E2E035F1D6D339C0071A186 /* NOSLbsNetMonitorTask.m in Sources */,
+				0E2E03551D6D339C0071A186 /* NOSConfig.m in Sources */,
+				0E2E03631D6D339C0071A186 /* NOSFileRecorder.m in Sources */,
+				0E2E03561D6D339C0071A186 /* NOSHmacSha1.m in Sources */,
+				0E2E03691D6D339C0071A186 /* NOSUploadOption.m in Sources */,
+				0E2E03681D6D339C0071A186 /* NOSUploadManager.m in Sources */,
+				0E2E03661D6D339C0071A186 /* NOSStatTimeTask.m in Sources */,
+				0E2E034C1D6D339C0071A186 /* NOSAFNetworkReachabilityManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0E2E02EF1D6D322E0071A186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0E2E02F01D6D322E0071A186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E2E02F21D6D322E0071A186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0E2E02F31D6D322E0071A186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E2E02E31D6D322E0071A186 /* Build configuration list for PBXProject "VCloudUploadSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E2E02EF1D6D322E0071A186 /* Debug */,
+				0E2E02F01D6D322E0071A186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E2E02F11D6D322E0071A186 /* Build configuration list for PBXNativeTarget "VCloudUploadSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E2E02F21D6D322E0071A186 /* Debug */,
+				0E2E02F31D6D322E0071A186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E2E02E01D6D322E0071A186 /* Project object */;
+}
