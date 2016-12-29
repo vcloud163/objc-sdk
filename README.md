@@ -1,7 +1,3 @@
-视频云上传IOS-SDK
-参考说明：https://g.hz.netease.com/nos/nos-ios-sdk
-
-
 # 视频云点播上传IOS-SDK 说明
 
 ## 1 简介
