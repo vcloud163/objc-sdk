@@ -32,9 +32,7 @@ typedef enum{
 
 
 //域名
-//static NSString *hostName = @"http://vcloud.163.com";
-//测试地址
-static NSString *hostName = @"http://106.2.44.248";
+static NSString *hostName = @"http://vcloud.163.com";
 //文件上传初始化接口名
 static NSString *uploadInit = @"/app/vod/upload/init";
 //上传完成根据对象名查询视频或水印图片主Id
