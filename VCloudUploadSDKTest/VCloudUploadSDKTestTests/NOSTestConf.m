@@ -8,12 +8,9 @@
 
 #import "NOSTestConf.h"
 
-//NSString *const kNOSTestBucket = @"doc";
-//NSString *const kNOSTestAccessKey = @"testAccessKey"; //
-//NSString *const kNOSTestSecretKey = @"testSecretKey"; //
-NSString *const kNOSTestBucket = @"vodk32ywxdf";
-NSString *const kNOSTestAccessKey = @"ab1856bb39044591939d7b94e1b8e5ee"; //
-NSString *const kNOSTestSecretKey = @"ed1573cd7de34086a0ba5c3c521c6df1"; //
+NSString *const kNOSTestBucket = @"testBucket";
+NSString *const kNOSTestAccessKey = @"testAccessKey";
+NSString *const kNOSTestSecretKey = @"testSecretKey";
 
 //所有接口均需要放置以下公共参数在请求头中，用于标识用户和接口鉴权
 NSString *const kNOSTestAppKey = @"027338bf05cc4a65b5d98bc9d6af80b3";
