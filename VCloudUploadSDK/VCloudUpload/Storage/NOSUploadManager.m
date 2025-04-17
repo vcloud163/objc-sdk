@@ -21,11 +21,15 @@
 #import "NOSTimeUtils.h"
 #import "NOSLbsTask.h"
 #import "NOSVcloudHttpManager.h"
+#import "OSSManager.h"
+#import "OSSWrapper.h"
+#import "StringUtils.h"
 
 @interface NOSUploadManager ()<NOSVcloudRequestDelegate>
 @property (nonatomic) NOSHttpManager *httpManager;
 @property (nonatomic) id <NOSRecorderDelegate> recorder;
 @property (nonatomic, strong) NOSRecorderKeyGenerator recorderKeyGen;
+@property (nonatomic, strong) OSSWrapper *oss;
 @end
 
 /**
@@ -78,6 +82,30 @@ static NOSStatTimeTask* statTimeTask;
     return [NOSVcloudHttpManager sharedInstance].objectName;
 }
 
+-(NSString *)accessKeyId{
+    return [NOSVcloudHttpManager sharedInstance].accessKeyId;
+}
+
+-(NSString *)accessKeySecret{
+    return [NOSVcloudHttpManager sharedInstance].accessKeySecret;
+}
+
+-(NSString *)callback{
+    return [NOSVcloudHttpManager sharedInstance].callback;
+}
+
+-(NSString *)host{
+    return [NOSVcloudHttpManager sharedInstance].host;
+}
+
+-(NSString *)securityToken{
+    return [NOSVcloudHttpManager sharedInstance].securityToken;
+}
+
+-(NSString *)storageType{
+    return [NOSVcloudHttpManager sharedInstance].storageType;
+}
+
 -(void)fileUploadInit:(NSString *)originFileName
          userFileName:(NSString *)userFileName
                typeId:(NSString *)typeId
@@ -91,6 +119,9 @@ static NOSStatTimeTask* statTimeTask;
                  fail:(NOSUploadRequestFail)fail
 {
     [[NOSVcloudHttpManager sharedInstance] fileUploadInit:originFileName userFileName:userFileName typeId:typeId presetId:presetId uploadCallbackUrl:uploadCallbackUrl callbackUrl:callbackUrl description:description watermarkId:watermarkId userDefInfo:userDefInfo success:^(NOSAFHTTPRequestOperation *operation, id responseObject) {
+        if ([self.storageType isEqualToString:@"oss"]) {
+          [self resetOSSManager];
+        }
         success(responseObject);
     } fail:^(NOSAFHTTPRequestOperation *operation, NSError *error) {
         fail(error);
@@ -191,8 +222,15 @@ static NOSStatTimeTask* statTimeTask;
         
         // start 统计
         statTimeTask = [NOSStatTimeTask sharedInstanceAndRun];
+        
+        [OSSLog enableLog];     // 开启sdk的日志功能
+        [self setupOSS];
 	}
 	return self;
+}
+
+- (void)setupOSS {
+    _oss = [[OSSWrapper alloc] init];
 }
 
 + (instancetype)sharedInstanceWithRecorder:(id <NOSRecorderDelegate> )recorder
@@ -260,14 +298,64 @@ static NOSStatTimeTask* statTimeTask;
                  token:(NSString *)token
               complete:(NOSUpCompletionHandler)completionHandler
                 option:(NOSUploadOption *)option {
-    [self putFile:filePath
-         protocal:@"https"
-           bucket:bucket
-              key:key
-            token:token
-         complete:completionHandler
-           option:option];
-    
+    if ([self.storageType isEqualToString:@"oss"]) {
+        [self putFileForOSS:filePath
+             protocal:@"https"
+               bucket:bucket
+                  key:key
+                token:token
+             complete:completionHandler
+               option:option];
+    }
+    else {
+        [self putFile:filePath
+             protocal:@"https"
+               bucket:bucket
+                  key:key
+                token:token
+             complete:completionHandler
+               option:option];
+    }
+}
+
+- (void)putFileForOSS:(NSString *)filePath
+             protocal:(NSString *)protocal
+               bucket:(NSString *)bucket
+                  key:(NSString *)key
+                token:(NSString *)token
+             complete:(NOSUpCompletionHandler)completionHandler
+               option:(NOSUploadOption *)option {
+    @autoreleasepool {
+        NSError *error = nil;
+        NSDictionary *fileAttr = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error];
+
+        if (error) {
+            NOSAsyncRun ( ^{
+                NOSResponseInfo *info = [NOSResponseInfo responseInfoWithFileError:error];
+                completionHandler(info, key, nil);
+            });
+            return;
+        }
+
+        //NSNumber *fileSizeNumber = fileAttr[NSFileSize];
+        //UInt32 fileSize = [fileSizeNumber intValue];
+        NSData *data = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        if (error) {
+            NOSAsyncRun ( ^{
+                NOSResponseInfo *info = [NOSResponseInfo responseInfoWithFileError:error];
+                completionHandler(info, key, nil);
+            });
+            return;
+        }
+        
+        [self.oss asyncPutImage:self.objectName key:key localFilePath:filePath complete:completionHandler option:option success:^(id result) {
+          NOSResponseInfo *info = [NOSResponseInfo responseInfoWithFileError:nil];
+          completionHandler(info, key, nil);
+        } failure:^(NSError *error) {
+          NOSResponseInfo *info = [NOSResponseInfo responseInfoWithFileError:error];
+          completionHandler(info, key, nil);
+        }];
+    }
 }
 
 - (void)putFile:(NSString *)filePath
@@ -332,6 +420,30 @@ static NOSStatTimeTask* statTimeTask;
 		    [up run];
 		});
 	}
+}
+
+- (void)resetOSSManager {
+    id<OSSCredentialProvider> credentialProvider = [[OSSStsTokenCredentialProvider alloc] initWithAccessKeyId:self.accessKeyId
+                                                                                                  secretKeyId:self.accessKeySecret
+                                                                                                securityToken:self.securityToken];
+    OSSClientConfiguration *cfg = [[OSSClientConfiguration alloc] init];
+    cfg.maxRetryCount = 3;
+    cfg.timeoutIntervalForRequest = 15;
+    cfg.isHttpdnsEnable = NO;
+    cfg.crc64Verifiable = YES;
+    
+    NSString *endPoint = [StringUtil getSubDomain:self.host];
+    OSSClient *defaultClient = [[OSSClient alloc] initWithEndpoint:endPoint credentialProvider:credentialProvider clientConfiguration:cfg];
+    [OSSManager sharedManager].defaultClient = defaultClient;
+    
+    self.oss.bucketName = self.bucketName;
+    self.oss.objectName = self.objectName;
+    self.oss.accessKeyId = self.accessKeyId;
+    self.oss.accessKeySecret = self.accessKeySecret;
+    self.oss.callback = self.callback;
+    self.oss.host = self.host;
+    self.oss.securityToken = self.securityToken;
+    self.oss.storageType = self.storageType;
 }
 
 @end

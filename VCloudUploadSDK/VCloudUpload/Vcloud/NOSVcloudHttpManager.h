@@ -42,6 +42,13 @@ typedef void (^vcHttpFail)(NOSAFHTTPRequestOperation *operation, NSError *error)
 @property(nonatomic,strong,readonly) NSString *bucketName;
 //存储上传文件的对象名
 @property(nonatomic,strong,readonly) NSString *objectName;
+
+@property(nonatomic,strong,readonly) NSString *accessKeyId;
+@property(nonatomic,strong,readonly) NSString *accessKeySecret;
+@property(nonatomic,strong,readonly) NSString *callback;
+@property(nonatomic,strong,readonly) NSString *host;
+@property(nonatomic,strong,readonly) NSString *securityToken;
+@property(nonatomic,strong,readonly) NSString *storageType;
 /**
  *  视频云请求单例
  *

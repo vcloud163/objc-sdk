@@ -110,6 +110,8 @@ IOS-SDK 是用于移动端点播上传的软件开发工具包，提供简单、
 
 为防止服务中止造成文件上传信息丢失，可通过在本地存储文件信息来记录断点信息，当服务重新启动，可根据文件继续上传文件。临时文件会在上传完成后删除记录。
 
+如果需要上传大文件，切片大小建议设置成4M。
+
 以下是使用示例：
 
 	//创建断点续传目录并记录
@@ -119,7 +121,7 @@ IOS-SDK 是用于移动端点播上传的软件开发工具包，提供简单、
                                            withSoTimeout: [_soTimeoutText.text intValue]
                        //withConnectionTimeout: [_connectTimeoutText.text intValue]
                                      withRefreshInterval: [_monitorInterval.text intValue]
-                                           withChunkSize: [_chunkSizeText.text intValue] * 1024
+                                           withChunkSize: [_chunkSizeText.text intValue] * 1024 //切片大小
                                      withMoniterInterval: [_monitorInterval.text intValue]
                                           withRetryCount: [_retryCountText.text intValue]];
     //将其设置为全局变量
@@ -151,6 +153,9 @@ IOS-SDK 是用于移动端点播上传的软件开发工具包，提供简单、
 
 **注：具体使用示例详见 sdk 包中 ViewController 类文件。**
 
+### 4.6 后台上传
+
+info.plist 开启后台拉取服务以支持后台上传文件。
 
 
 ## 5 版本更新记录

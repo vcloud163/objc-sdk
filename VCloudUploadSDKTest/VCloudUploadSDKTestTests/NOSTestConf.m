@@ -8,18 +8,21 @@
 
 #import "NOSTestConf.h"
 
+//ENABLE_OSS： YES 使用海外 aliyun上传
+#define ENABLE_OSS 0
+
 NSString *const kNOSTestBucket = @"testBucket";
 NSString *const kNOSTestAccessKey = @"testAccessKey";
 NSString *const kNOSTestSecretKey = @"testSecretKey";
 
 //所有接口均需要放置以下公共参数在请求头中，用于标识用户和接口鉴权
-NSString *const kNOSTestAppKey = @"027338bf05cc4a65b5d98bc9d6af80b3";
 NSString *const kNOSTestNonce = @"1"; //
 NSString *const kNOSTestCurTime = @"1465723418"; //
 NSString *const kNOSTestCheckSum = @"038f586f690359adf75012337ea367e2b5fca6fb"; //
 
-NSString *const kNOSTestAccid = @"abcdefgh";
-NSString *const kNOSTestToken = @"4c1d5942ff0040588931bb244d9761c6d687d526";
+NSString *const kNOSTestAppKey = @"<#请输入appkey#>";
+NSString *const kNOSTestAccid = @"<#Accid#>";
+NSString *const kNOSTestToken = @"<#Token#>";
 
 
 const UInt32 kNOSTestSoTimeout = 30;

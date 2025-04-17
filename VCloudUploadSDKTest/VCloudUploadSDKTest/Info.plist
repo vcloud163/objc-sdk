@@ -35,6 +35,10 @@
 	<string>APP需要使用你的麦克风</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>APP需要您的同意才能读取媒体资料库</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

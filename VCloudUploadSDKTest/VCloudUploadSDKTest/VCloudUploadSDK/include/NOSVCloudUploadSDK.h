@@ -14,5 +14,6 @@
 #import "NOSUploadManager.h"
 #import "NOSFileRecorder.h"
 #import "NOSUploadOption.h"
+#import "NOSResponseInfo.h"
 
 #endif /* NOSVCloudUploadSDK_h */

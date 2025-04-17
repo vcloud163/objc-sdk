@@ -14,7 +14,7 @@ const UInt32 kNOSSoTimeout = 30;
 
 //const UInt32 kNOSConnectionTimeout = 30;
 
-const UInt32 kNOSChunkSize = 128 * 1024;
+const UInt32 kNOSChunkSize = 4 * 1024 * 1024;
 
 const UInt32 kNOSMoniterInterval = 120;
 

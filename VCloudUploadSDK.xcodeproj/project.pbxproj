@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,6 +47,11 @@
 		0E2E03EB1D6D4BA40071A186 /* NOSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E03EA1D6D4BA40071A186 /* NOSReachability.m */; };
 		0E2E04081D6D8E0B0071A186 /* NOSBucketLBSMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2E04071D6D8E0B0071A186 /* NOSBucketLBSMap.m */; };
 		0E2E040D1D6DA32D0071A186 /* NOSVCloudUploadSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E2E040C1D6DA2E30071A186 /* NOSVCloudUploadSDK.h */; };
+		47A411352C883FA1004725C3 /* DownloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A4112C2C883FA1004725C3 /* DownloadService.m */; };
+		47A411362C883FA1004725C3 /* OSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A4112E2C883FA1004725C3 /* OSSManager.m */; };
+		47A411372C883FA1004725C3 /* OSSWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A411302C883FA1004725C3 /* OSSWrapper.m */; };
+		47A4113A2C883FE2004725C3 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A411392C883FE2004725C3 /* StringUtils.m */; };
+		47A4113F2C886017004725C3 /* AliyunOSSiOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A411322C883FA1004725C3 /* AliyunOSSiOS.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -145,6 +150,15 @@
 		0E2E04061D6D8E0B0071A186 /* NOSBucketLBSMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSBucketLBSMap.h; sourceTree = "<group>"; };
 		0E2E04071D6D8E0B0071A186 /* NOSBucketLBSMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOSBucketLBSMap.m; sourceTree = "<group>"; };
 		0E2E040C1D6DA2E30071A186 /* NOSVCloudUploadSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOSVCloudUploadSDK.h; sourceTree = "<group>"; };
+		47A4112B2C883FA1004725C3 /* DownloadService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadService.h; sourceTree = "<group>"; };
+		47A4112C2C883FA1004725C3 /* DownloadService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadService.m; sourceTree = "<group>"; };
+		47A4112D2C883FA1004725C3 /* OSSManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSManager.h; sourceTree = "<group>"; };
+		47A4112E2C883FA1004725C3 /* OSSManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSManager.m; sourceTree = "<group>"; };
+		47A4112F2C883FA1004725C3 /* OSSWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSWrapper.h; sourceTree = "<group>"; };
+		47A411302C883FA1004725C3 /* OSSWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSWrapper.m; sourceTree = "<group>"; };
+		47A411322C883FA1004725C3 /* AliyunOSSiOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AliyunOSSiOS.xcframework; sourceTree = "<group>"; };
+		47A411382C883FE2004725C3 /* StringUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		47A411392C883FE2004725C3 /* StringUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47A4113F2C886017004725C3 /* AliyunOSSiOS.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				0E2E02EA1D6D322E0071A186 /* VCloudUploadSDK */,
+				47A411162C883E75004725C3 /* Frameworks */,
 				0E2E02E91D6D322E0071A186 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,6 +202,7 @@
 		0E2E02F41D6D339C0071A186 /* ThridPart */ = {
 			isa = PBXGroup;
 			children = (
+				47A411332C883FA1004725C3 /* Aliyun */,
 				0E2E03E81D6D4BA40071A186 /* NOSReachability */,
 				0E2E02F51D6D339C0071A186 /* NOSAFNetworking */,
 			);
@@ -353,6 +370,37 @@
 			path = Bucket;
 			sourceTree = "<group>";
 		};
+		47A411162C883E75004725C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47A411312C883FA1004725C3 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				47A4112B2C883FA1004725C3 /* DownloadService.h */,
+				47A4112C2C883FA1004725C3 /* DownloadService.m */,
+				47A4112D2C883FA1004725C3 /* OSSManager.h */,
+				47A4112E2C883FA1004725C3 /* OSSManager.m */,
+				47A4112F2C883FA1004725C3 /* OSSWrapper.h */,
+				47A411302C883FA1004725C3 /* OSSWrapper.m */,
+				47A411382C883FE2004725C3 /* StringUtils.h */,
+				47A411392C883FE2004725C3 /* StringUtils.m */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		47A411332C883FA1004725C3 /* Aliyun */ = {
+			isa = PBXGroup;
+			children = (
+				47A411312C883FA1004725C3 /* Wrapper */,
+				47A411322C883FA1004725C3 /* AliyunOSSiOS.xcframework */,
+			);
+			path = Aliyun;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,6 +440,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 0E2E02DF1D6D322E0071A186;
@@ -430,6 +479,9 @@
 				0E2E03491D6D339C0071A186 /* NOSAFHTTPRequestOperation.m in Sources */,
 				0E2E035B1D6D339C0071A186 /* NOSUrlCode.m in Sources */,
 				0E2E03571D6D339C0071A186 /* NOSIPToLong.m in Sources */,
+				47A411352C883FA1004725C3 /* DownloadService.m in Sources */,
+				47A411362C883FA1004725C3 /* OSSManager.m in Sources */,
+				47A411372C883FA1004725C3 /* OSSWrapper.m in Sources */,
 				0E2E03521D6D339C0071A186 /* GZIP.m in Sources */,
 				0E2E034E1D6D339C0071A186 /* NOSAFURLConnectionOperation.m in Sources */,
 				0E2E035C1D6D339C0071A186 /* NOSHttpManager.m in Sources */,
@@ -438,6 +490,7 @@
 				0E2E035F1D6D339C0071A186 /* NOSLbsNetMonitorTask.m in Sources */,
 				0E2E03551D6D339C0071A186 /* NOSConfig.m in Sources */,
 				0E2E03631D6D339C0071A186 /* NOSFileRecorder.m in Sources */,
+				47A4113A2C883FE2004725C3 /* StringUtils.m in Sources */,
 				0E2E03561D6D339C0071A186 /* NOSHmacSha1.m in Sources */,
 				0E2E03691D6D339C0071A186 /* NOSUploadOption.m in Sources */,
 				0E2E03681D6D339C0071A186 /* NOSUploadManager.m in Sources */,
