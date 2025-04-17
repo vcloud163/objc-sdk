@@ -150,11 +150,20 @@ static NSString *setCallBack = @"/app/vod/upload/setcallback";
     NSString *body = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     [self requestPost:url body:body success:^(NOSAFHTTPRequestOperation *operation, id responseObject) {
+      
+        //NSLog(@"####responseObject:%@",responseObject);
+      
         if ([[responseObject objectForKey:@"code"] integerValue] == RequestSuccess) {
             NSDictionary *resDict = [responseObject objectForKey:@"ret"];
             _xNosToken = [resDict objectForKey:@"xNosToken"];
             _bucketName = [resDict objectForKey:@"bucket"];
             _objectName = [resDict objectForKey:@"object"];
+            _accessKeyId = [resDict objectForKey:@"accessKeyId"];
+            _accessKeySecret = [resDict objectForKey:@"accessKeySecret"];
+            _callback = [resDict objectForKey:@"callback"];
+            _host = [resDict objectForKey:@"host"];
+            _securityToken = [resDict objectForKey:@"securityToken"];
+            _storageType = [resDict objectForKey:@"storageType"];
         }
         success(operation, responseObject);
     } fail:fail];

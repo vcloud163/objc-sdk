@@ -80,6 +80,13 @@ typedef NSString *(^NOSRecorderKeyGenerator)(NSString *uploadKey, NSString *file
  */
 @property(nonatomic,strong,readonly) NSString *objectName;
 
+@property(nonatomic,strong,readonly) NSString *accessKeyId;
+@property(nonatomic,strong,readonly) NSString *accessKeySecret;
+@property(nonatomic,strong,readonly) NSString *callback;
+@property(nonatomic,strong,readonly) NSString *host;
+@property(nonatomic,strong,readonly) NSString *securityToken;
+@property(nonatomic,strong,readonly) NSString *storageType;
+
 /**
  *    默认构造方法，没有持久化记录
  *
